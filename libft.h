@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 19:51:01 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/15 19:54:45 by skuznets         ###   ########.fr       */
+/*   Created: 2024/01/15 19:54:11 by skuznets          #+#    #+#             */
+/*   Updated: 2024/01/15 19:54:18 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	ft_isalpha(int c)
-{
-	return ((c >= 'A' & c <= 'Z') || (c >= 'a' & c <= 'z'));
-}
+# include <stdlib.h>
+# include <unistd.h>
+
+int	ft_isalpha(int c);
+
+#endif
