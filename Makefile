@@ -6,29 +6,28 @@
 #    By: skuznets <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 23:51:17 by skuznets          #+#    #+#              #
-#    Updated: 2024/01/15 23:58:21 by skuznets         ###   ########.fr        #
+#    Updated: 2024/01/16 09:31:53 by skuznets         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft.a
+SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c ft_bzero.c
+OBJS = $(SRC:.c=.o)
+NAME = libft.a
 AR = ar rc
 CC = gcc
+RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c
-OBJ = $(SRC:.c=.o)
-INC = libft.h
 
 all: $(NAME)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
+
 clean:
-	/bin/rm -f $(OBJ)
-fclean: clean
-	/bin/rm -f $(NAME)
-re: fclean all
+				$(RM) $(OBJS)
 
-$(NAME): $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+fclean:			clean
+				$(RM) $(NAME)
 
-%.o: %.c $(INC)
-	$(CC) $(CFLAGS) -c $< -o $@
+re:				fclean $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY:			all clean fclean re bonus
