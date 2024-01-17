@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 19:54:11 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/17 17:16:46 by skuznets         ###   ########.fr       */
+/*   Created: 2024/01/17 17:12:45 by skuznets          #+#    #+#             */
+/*   Updated: 2024/01/17 17:22:20 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	char	*output;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-size_t	ft_strlen(const char *s);
-
-void	*ft_memset(void *b, int c, size_t len);
-
-char	*strrchr(const char *s, int c);
-
-#endif
+	output = NULL;
+	while (*s)
+	{
+		if (*s == c)
+			output = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (output);
+}
