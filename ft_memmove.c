@@ -6,7 +6,7 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:48:00 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/22 20:36:10 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:02:25 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void	*dst, const void *src, size_t	len)
 	dest = (char *)dst;
 	source = (char *)src;
 	if (dest == NULL && source == NULL)
-        return (NULL);
+		return (NULL);
 	if (dest < source)
 	{
 		while (len--)
