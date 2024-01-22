@@ -6,7 +6,7 @@
 #    By: skuznets <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 17:43:31 by skuznets          #+#    #+#              #
-#    Updated: 2024/01/22 18:15:44 by skuznets         ###   ########.fr        #
+#    Updated: 2024/01/22 18:39:06 by skuznets         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_strrchr.c ft_tolower.c ft_toupper.c ft_substr.c
 OBJS = $(SRC:.c=.o)
 NAME = libft.a
 AR = ar rc
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
@@ -28,7 +28,7 @@ $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(NAME)
 
 fclean:			clean
 				$(RM) $(NAME)
