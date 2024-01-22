@@ -6,7 +6,7 @@
 #    By: skuznets <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 23:51:17 by skuznets          #+#    #+#              #
-#    Updated: 2024/01/15 23:58:21 by skuznets         ###   ########.fr        #
+#    Updated: 2024/01/17 17:30:55 by skuznets         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = ft.a
 AR = ar rc
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c
+SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_memset.c ft_strlen.c ft_strrchr.c ft_strchr.c
 OBJ = $(SRC:.c=.o)
 INC = libft.h
 

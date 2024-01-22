@@ -6,7 +6,7 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 19:54:11 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/17 17:16:46 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/17 17:28:38 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ size_t	ft_strlen(const char *s);
 
 void	*ft_memset(void *b, int c, size_t len);
 
+char	*strchr(const char *s, int c);
 char	*strrchr(const char *s, int c);
 
 #endif

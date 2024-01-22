@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 23:34:40 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/17 17:49:39 by skuznets         ###   ########.fr       */
+/*   Created: 2024/01/17 17:25:08 by skuznets          #+#    #+#             */
+/*   Updated: 2024/01/17 17:53:37 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	char	*output;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	output = NULL;
+	while (*s)
+	{
+		if (*s == c)
+			output = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (output);
+}
+
+#include <stdio.h>
+int main(void)
+{
+	char *s;
+	printf("%zu\n", ft_strlen(s));
 }
