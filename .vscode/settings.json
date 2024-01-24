@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"stdio.h": "c",
-		"ft_itoa": "c"
+		"ft_itoa": "c",
+		"libft.h": "c"
 	}
 }

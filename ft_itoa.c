@@ -6,7 +6,7 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:04:53 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/24 15:23:32 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:31:29 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,14 @@ char	*ft_itoa(int n)
 
 	num = n;
 	len = nlen(n);
-	if (n < 0)
+	if (n <= 0)
 	{
 		num *= -1;
 		len++;
 	}
 	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (n == 0)
+		str = (char *)malloc(2);
 	if (!str)
 		return (NULL);
 	*(str + len) = 0;
@@ -49,7 +51,5 @@ char	*ft_itoa(int n)
 	}
 	if (n < 0)
 		*(str + 0) = '-';
-	if (n == 0)
-		*(str + 0) = '0';
 	return (str);
 }
