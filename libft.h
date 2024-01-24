@@ -6,7 +6,7 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:36:28 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/22 18:32:35 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:50:28 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 
 int		ft_atoi(const char *str);
+char	*ft_itoa(const int n);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -44,8 +47,7 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *str, const char *find, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+char	*ft_strjoin(char const *s1, char const*s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
