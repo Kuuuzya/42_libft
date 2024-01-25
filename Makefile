@@ -6,7 +6,7 @@
 #    By: skuznets <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 17:43:31 by skuznets          #+#    #+#              #
-#    Updated: 2024/01/25 01:46:09 by skuznets         ###   ########.fr        #
+#    Updated: 2024/01/25 02:56:26 by skuznets         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ ft_strrchr.c ft_tolower.c ft_toupper.c ft_substr.c ft_strjoin.c \
 ft_strtrim.c ft_itoa.c ft_split.c ft_strmapi.c ft_putchar_fd.c \
 ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 
-BONUS = ft_lstnew.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS = $(SRC:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
@@ -33,8 +34,8 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
-bonus:	$(BONUS_OBJS)
-	$(AR) $(BONUS) $(BONUS_OBJS)
+bonus:	$(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(BONUS_OBJS)
 
 clean:
 			$(RM) $(OBJS) $(BONUS_OBJS)
@@ -44,4 +45,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, bonus, clean, fclean, re

@@ -6,7 +6,7 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:04:53 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/24 18:31:29 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/25 12:20:46 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,15 @@ int	nlen(int n)
 	return (i);
 }
 
+void	ft_add_to_str(char *str, long int num, size_t len)
+{
+	while (len--)
+	{
+		*(str + len) = num % 10 + '0';
+		num = num / 10;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	char		*str;
@@ -38,18 +47,15 @@ char	*ft_itoa(int n)
 		num *= -1;
 		len++;
 	}
-	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (n == 0)
 		str = (char *)malloc(2);
+	else
+		str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	*(str + len) = 0;
-	while (len--)
-	{
-		*(str + len) = num % 10 + '0';
-		num = num / 10;
-	}
+	ft_add_to_str(str, num, len);
 	if (n < 0)
 		*(str + 0) = '-';
+	*(str + len) = 0;
 	return (str);
 }
