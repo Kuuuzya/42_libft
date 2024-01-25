@@ -6,13 +6,13 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:04:53 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/25 12:20:46 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:51:38 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nlen(int n)
+static	int	nlen(int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	nlen(int n)
 	return (i);
 }
 
-void	ft_add_to_str(char *str, long int num, size_t len)
+static	void	ft_add_to_str(char *str, long int num, size_t len)
 {
 	while (len--)
 	{

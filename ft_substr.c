@@ -6,13 +6,13 @@
 /*   By: skuznets <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 18:11:48 by skuznets          #+#    #+#             */
-/*   Updated: 2024/01/25 12:06:00 by skuznets         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:52:37 by skuznets         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t a, size_t b)
+static	size_t	ft_min(size_t a, size_t b)
 {
 	if (a < b)
 		return (a);
